@@ -2,27 +2,28 @@ package ClinicaVeterinaria;
 
 public class Consulta extends Atendimento {
 	
-	double valorConsulta;
+	double valorDosMateriais;
 	
 	//construtor consulta
 	
-	public Consulta(Animal nomeDoAnimal, double valorDoAtendimento) {
-		super(nomeDoAnimal, valorDoAtendimento);
+	public Consulta(Tutor nomeDoTutor, Animal nomeDoAnimal, double valorDaConsulta, double valorDosMateriais) {
+		super(nomeDoTutor, nomeDoAnimal, valorDaConsulta);
+		this.valorDosMateriais = valorDosMateriais;
 	}
 	
 	//métodos consulta
 	
-	public double getValorConsulta() {
-		return valorConsulta;
+	public double getValorDosMateriais() {
+		return valorDosMateriais;
 	}
 
-	public void setValorConsulta(double valorConsulta) {
-		this.valorConsulta = valorConsulta;
+	public void setValorDosMateriais(double valorDosMateriais) {
+		this.valorDosMateriais = valorDosMateriais;
 	}
 	
 	@Override
-	public double getTotalDoAtendimento() {
-		return super.getValorDoAtendimento() + valorConsulta;
+	public double getValorTotalDoAtendimento() {
+		return getValorDaConsulta() + valorDosMateriais;
 	}
 		
 }

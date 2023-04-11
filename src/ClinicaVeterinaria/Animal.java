@@ -2,11 +2,12 @@ package ClinicaVeterinaria;
 
 public abstract class Animal {
 	
-	//atributos de Animal: nome, tutor e valor de antendimento
+	//atributos de Animal: nome, gênero e tutor
 	
 	private String nomeDoAnimal;
-	private Tutor nomeDoTutor;
 	private String genero;
+	private Tutor nomeDoTutor;
+	
 	
 	// construtor de Animal
 	
@@ -24,10 +25,6 @@ public abstract class Animal {
 
 	public Tutor getNomeDoTutor() {
 		return nomeDoTutor;
-	}
-
-	public void setNomeDoTutor(Tutor nomeDoTutor) {
-		this.nomeDoTutor = nomeDoTutor;
 	}
 
 	public String getGenero() {

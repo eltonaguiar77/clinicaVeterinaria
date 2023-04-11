@@ -4,23 +4,15 @@ public class TestaDono {
 	
 	public static void main(String[] args) {
 		
-		Tutor elton = new Tutor();
-		Cachorro frida = new Cachorro("Frida", "fêmea", elton, "não");
+		Tutor elton = new Tutor("Elton");
+		Cachorro frida = new Cachorro("Frida", "Fêmea", elton, "Não");
+		Gato coruja = new Gato("Coruja", "Fêmea", elton, "Não");
+
+		elton.setPet(frida);
+		elton.setPet(coruja);
+		elton.getPet();
 		
-		elton.setNomeDoTutor("Elton");
-		elton.setNomeDoAnimal(frida);
 		
-	
-		System.out.println("Frida pode morder: " + frida.getMorde());
-		System.out.println(elton.getNomeDoTutor());
-		System.out.println(frida.getNomeDoTutor().getNomeDoTutor());
-		
-		Consulta consultaFrida = new Consulta(frida, 100.0);
-		consultaFrida.setValorConsulta(50.0);
-		
-		System.out.println(consultaFrida.getValorDoAtendimento());
-		System.out.println(consultaFrida.getValorConsulta());
-		System.out.println(consultaFrida.getTotalDoAtendimento());
 	}
 
 }
